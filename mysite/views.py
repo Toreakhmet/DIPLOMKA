@@ -1,12 +1,6 @@
-from django.shortcuts import render,redirect
 from .models import *
-# Create your views here.
 from django.http import HttpResponse
-
 from django.db.models import Sum
-from django.http import HttpResponse
-from django.shortcuts import render, redirect
-from .models import Product, Cart  
 from django.shortcuts import render, redirect
 from .forms import CustomUserCreationForm
 
