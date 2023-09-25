@@ -15,9 +15,9 @@ def home(request):
     all_products = Product.objects.filter(stock=2)
     total_price = 0  
 
-    if request.user.is_authenticated:  # Проверка авторизации пользователя
+    if request.user.is_authenticated: 
         cart, created = Cart.objects.get_or_create(user=request.user)
-        total_price = cart.products.aggregate(Sum('price'))['price__sum'] or 0  # Считаем сумму
+        total_price = cart.products.aggregate(Sum('price'))['price__sum'] or 0 
     
     if request.method == 'POST':
         if 'product_otpravka' in request.POST:
@@ -31,7 +31,7 @@ def home(request):
                     return HttpResponse("Invalid product ID.")
                 
                 cart.products.add(selected_product)
-                total_price = cart.products.aggregate(Sum('price'))['price__sum'] or 0  # Обновляем сумму
+                total_price = cart.products.aggregate(Sum('price'))['price__sum'] or 0  
             else:
                                 return HttpResponse('Зарегистриуйтесь')
 
@@ -46,7 +46,7 @@ def home(request):
 
 def profile(request):
     cart = Cart.objects.get(user=request.user)
-    products_in_cart = cart.products.all()  # QuerySet товаров в корзине
+    products_in_cart = cart.products.all() 
     
     return render(request, 'profile.html', {'products_in_cart': products_in_cart})
 
@@ -57,7 +57,7 @@ def register_view(request):
         form = CustomUserCreationForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('login')  # Redirect to login page
+            return redirect('login')  
     else:
         form = CustomUserCreationForm()
 
