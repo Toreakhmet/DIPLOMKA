@@ -1,0 +1,57 @@
+/* General styles */
+body, h2, form, button {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+/* Registration form styles */
+form {
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #FF9900;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #FF7700;
+}
+
+/* Additional styles for form elements */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+label {
+    font-weight: bold;
+}

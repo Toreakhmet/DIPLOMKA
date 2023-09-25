@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'home.css'%}">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">MiniAmazon</div>
+        <nav class="main-nav">
+          {% if user.is_authenticated %}
+          <img class="img-logo" src="{{user.image.url}}" alt="profile">
+          <a href="#">{{user}}</a>
+          {% endif%}
+          <a href="{% url 'home'%}">Home</a>
+          {% if user.is_authenticated %}
+          <a href="{% url 'logout'%}">Logout</a>
+          {%else%}
+          <a href="{% url 'login'%}">Login</a>
+          <a href="{% url 'register'%}">Registration</a>
+          {% endif%}
+          <a href="{% url 'profile' %}" class="cart">Cart <span class="cart-icon">&#128722;</span></a>
+        </nav>
+      </header>
+    
+    <div class="container">
+
+      <aside class="sidebar">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="{% url 'home'%}">Electronics</a></li>
+          <li><a href="{% url 'book'%}">Books</a></li>
+          <li><a href="#">Fashion</a></li>
+          <li><a href="#">Groceries</a></li>
+        </ul>
+      </aside>
+    
+      <!-- Main content -->
+      
+      <main class="content">
+        
+        <section class="featured">
+          <h2>Featured Products</h2>
+          {% block body%}
+          
+          {% endblock %}
+          
+
+          </div>
+          <!-- Вставьте этот код там, где должен располагаться чат -->
+            <div id="chat-box">
+                <div id="chat-header">Chat with Admin</div>
+                <div id="chat-body"></div>
+                <input id="chat-input" type="text" placeholder="Type your message..." />
+                <button id="chat-send">Send</button>
+            </div>
+
+        </section>
+      </main>
+    </div>
+
+      <!-- Footer Section -->
+      <footer>
+        <p>&copy; 2023 MiniAmazon. All rights reserved.</p>
+      </footer>
+      <script src="{% static 'js.js'%}"></script>
+</body>
+</html>

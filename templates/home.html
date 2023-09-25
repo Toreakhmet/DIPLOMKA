@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+{% block title %}Книги{% endblock %}
+{% block body%} 
+        {% for i in product %}
+          <div class="product-card">
+            <img src="{{i.image.url}}" alt="Product 2">
+            <h3>{{i.name}}</h3>
+            <h4>{{i.description}}</h4>
+            <p class="price">${{ i.price }}</p>
+            <form action="{% url 'home' %}" method="post">
+                {% csrf_token%}
+                <input type="hidden" name="product_otpravka" value="{{ i.id }}">
+                <button type="submit">Add to Cart</button>
+            </form>
+
+          </div>
+        {% endfor%}
+{% endblock%}

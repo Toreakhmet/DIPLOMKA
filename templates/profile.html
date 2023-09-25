@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ваш профиль</title>
+    <style>
+        body, h1, h2, ul, li { margin: 0; padding: 0; font-family: Arial, sans-serif; }
+        body { background-color: #f4f4f4; }
+        header { background-color: #232F3E; color: white; padding: 1em; text-align: center; box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2); }
+        .content { padding: 20px; }
+        h2 { margin-bottom: 20px; font-size: 1.4em; }
+        ul { list-style: none; }
+        li { border: 1px solid #ccc; padding: 10px; margin: 10px 0; text-align: center; background-color: #fff; box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1); transition: box-shadow 0.3s ease; }
+        li:hover { box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2); }
+        .price { color: #B12704; font-size: 1.2em; margin: 10px 0; }
+        button { padding: 10px 20px; background-color: #FF9900; border: none; color: white; cursor: pointer; transition: background-color 0.3s ease; }
+        button:hover { background-color: #FF7700; }
+    </style>
+</head>
+<body>
+
+
+<div class="content">
+    <h2>Товары в корзине:</h2>
+    <ul>
+        {% for product in products_in_cart %}
+            <li>
+                <strong>{{ product.name }}</strong> - ${{ product.price }}
+                <button>Удалить из корзины</button>
+            </li>
+        {% endfor %}
+    </ul>
+    <h3>Общая стоимость: ${{ total_price }}</h3>
+    <button>Оплатить</button>
+</div>
+
+</body>
+</html>

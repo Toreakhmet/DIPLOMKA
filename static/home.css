@@ -1,0 +1,221 @@
+/* General layout styles */
+body, h2, h3, p, ul, li, a, button {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #232F3E;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .main-nav a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .main-nav a:hover {
+    color: #FF9900;
+  }
+  
+  /* Sidebar styles */
+  .sidebar {
+    float: left;
+    width: 20%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar h3 {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+  }
+  
+  .sidebar ul li {
+    margin: 12px 0;
+    transition: background 0.3s ease;
+  }
+  
+  .sidebar ul li:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .sidebar ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+  }
+  
+  /* Main content */
+  .content {
+    float: right;
+    width: 75%;
+    padding: 20px;
+  }
+  
+  .featured h2 {
+    margin-bottom: 20px;
+    font-size: 1.4em;
+  }
+  
+  .product-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    float: left;
+    width: calc(33.333% - 30px);
+    background-color: #fff;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .product-card:hover {
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .price {
+    color: #B12704;
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #FF9900;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #FF7700;
+  }
+  
+  /* Footer */
+  footer {
+    clear: both;
+    background-color: #232F3E;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  .product-card {
+    transition: transform 0.3s ease;
+  }
+  .container {
+    display: flex;
+  }
+  #chat-box {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+}
+
+/* Chat box styling */
+#chat-box {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+#chat-box:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+#chat-header {
+    background-color: #232F3E;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#chat-body {
+    height: 300px;
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+.user-message, .admin-message {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.user-message {
+    background-color: #f1f1f1;
+    text-align: right;
+}
+
+.admin-message {
+    background-color: #ddd;
+}
+
+#chat-input {
+    width: 80%;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+#chat-send {
+    width: 20%;
+    padding: 10px;
+    background-color: #FF9900;
+    color: white;
+    cursor: pointer;
+    border-top: 1px solid #ccc;
+    transition: background-color 0.3s ease;
+}
+
+#chat-send:hover {
+    background-color: #FF7700;
+}
+.img-logo {
+    width: 40px;  /* Ширина изображения */
+    height: 40px; /* Высота изображения */
+    border-radius: 50%;  /* Делаем изображение круглым */
+    margin-right: 10px; /* Добавляем небольшой отступ справа */
+    object-fit: cover; /* Подгоняем размер изображения */
+  }
+  
+    
