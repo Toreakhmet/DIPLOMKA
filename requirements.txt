@@ -1,4 +1,5 @@
-asgiref
+yasgiref
 Django
 pillow
 sqlparse
+gunicorn
