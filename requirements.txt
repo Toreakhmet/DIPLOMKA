@@ -1,4 +1,4 @@
-yasgiref
+asgiref
 Django
 pillow
 sqlparse
